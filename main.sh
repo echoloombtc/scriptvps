@@ -485,6 +485,5 @@ add_domain
 install_all
 finish  
 
-rm ~/.bash_history
 sleep 10
-# reboot
+reboot
