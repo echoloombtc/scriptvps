@@ -425,11 +425,8 @@ function finish(){
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${MYIP}/g" /etc/squid/squid.conf
     chown -R www-data:www-data /etc/msmtprc
-
-
-    # > Bersihkan History
-    alias bash2="bash --init-file <(echo '. ~/.bashrc; unset HISTFILE')"
     clear
+
     echo "    ┌─────────────────────────────────────────────────────┐"
     echo "    │       >>> Service & Port                            │"
     echo "    │   - Open SSH                : 443, 80, 22           │"
@@ -477,13 +474,4 @@ function finish(){
     #     reboot
     # fi
 }
-cd /tmp
-FIGHTERTUNNEL
-first_setup
-dir_xray
-add_domain
-install_all
-finish  
-
-sleep 10
 reboot
