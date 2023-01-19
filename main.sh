@@ -425,8 +425,11 @@ function finish(){
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${MYIP}/g" /etc/squid/squid.conf
     chown -R www-data:www-data /etc/msmtprc
-    clear
 
+
+    # > Bersihkan History
+    alias bash2="bash --init-file <(echo '. ~/.bashrc; unset HISTFILE')"
+    clear
     echo "    ┌─────────────────────────────────────────────────────┐"
     echo "    │       >>> Service & Port                            │"
     echo "    │   - Open SSH                : 443, 80, 22           │"
