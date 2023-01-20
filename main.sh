@@ -477,10 +477,4 @@ function finish(){
     #     reboot
     # fi
 }
-cd /tmp
-FIGHTERTUNNEL
-first_setup
-dir_xray
-add_domain
-install_all
-finish 
+reboot
